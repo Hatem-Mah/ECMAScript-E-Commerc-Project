@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ES6 Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1> ES6 Shop</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+                <li id="authLink"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="products-page">
+        <div class="products-container">
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h3>Filters</h3>
+                    <button id="resetFilters" class="btn-reset">Reset</button>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <div class="filter-options" id="categoryFilter">
+                        <label class="filter-label">
+                            <input type="checkbox" value="all" checked> All
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Min" class="price-input">
+                        <span>-</span>
+                        <input type="number" id="maxPrice" placeholder="Max" class="price-input">
+                    </div>
+                    <input type="range" id="priceSlider" min="0" max="1000" value="1000" class="slider-price">
+                    <p class="price-display">Price: $0 - $<span id="priceValue">1000</span></p>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Availability</h4>
+                    <div class="filter-options" id="sizeFilter">
+                        <label class="filter-label">
+                            <input type="checkbox" value="in-stock"> In Stock
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" value="all-items" checked> All Items
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Rating</h4>
+                    <div class="filter-options" id="ratingFilter">
+                        <label class="filter-label">
+                            <input type="checkbox" value="4"> 4 Stars & Up
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" value="3"> 3 Stars & Up
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" value="2"> 2 Stars & Up
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h2>Our Products</h2>
+                    <div class="sort-controls">
+                        <label for="sortBy">Sort by:</label>
+                        <select id="sortBy" class="sort-select">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                            <option value="rating">Rating: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <p class="loading">Loading products...</p>
+                </div>
+
+                <div id="noProducts" class="no-products" style="display: none;">
+                    <p>No products found matching your filters.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ES6 Shop. All rights reserved. | Built with Vanilla JavaScript & ES6</p>
+    </footer>
+
+    <script type="module" src="../js/products.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/filters.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ES6 Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1> ES6 Shop</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+                <li id="authLink"><a href="login.html" class="nav-link active">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <div class="auth-wrapper">
+            <div class="form-container">
+                <div class="form-toggle">
+                    <button class="toggle-btn active" id="loginToggle">Login</button>
+                    <button class="toggle-btn" id="registerToggle">Register</button>
+                </div>
+
+                <form id="loginForm" class="auth-form active">
+                    <h2>Login to Your Account</h2>
+                    
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password *</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <p class="form-text">Don't have an account? <a href="#" onclick="toggleForms(event)">Register here</a></p>
+                </form>
+
+                <form id="registerForm" class="auth-form">
+                    <h2>Create New Account</h2>
+                    
+                    <div class="form-group">
+                        <label for="registerName">Full Name *</label>
+                        <input type="text" id="registerName" name="fullName" required>
+                        <span class="error-message" id="registerNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address *</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                        <span class="error-message" id="registerEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password *</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                        <span class="error-message" id="registerPasswordError"></span>
+                        <small>Password must be at least 8 characters with uppercase, lowercase, and numbers</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirm Password *</label>
+                        <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+                        <span class="error-message" id="registerConfirmPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            I agree to the Terms and Conditions
+                        </label>
+                        <span class="error-message" id="registerTermsError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <p class="form-text">Already have an account? <a href="#" onclick="toggleForms(event)">Login here</a></p>
+                </form>
+            </div>
+
+            <div class="success-message" id="successMessage" style="display: none;">
+                <h3>✓ Success!</h3>
+                <p id="successText"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ES6 Shop. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store - ES6 Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ES6 Shop</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="pages/products.html" class="nav-link">Products</a></li>
+                <li><a href="pages/cart.html" class="nav-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+                <li id="authLink"><a href="pages/login.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slides-wrapper">
+                    <div class="slide active" style="background-image: url('assets/1.jpg')">
+                        <div class="slide-content">
+                            <h2>Welcome to ES6 Shop</h2>
+                            <p>Discover amazing products with modern JavaScript</p>
+                            <a href="pages/products.html" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('assets/2.jpg')">
+                        <div class="slide-content">
+                            <h2>Exclusive Deals</h2>
+                            <p>Get up to 50% off on selected items</p>
+                            <a href="pages/products.html" class="btn btn-primary">View Offers</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('assets/3.jpg')">
+                        <div class="slide-content">
+                            <h2>Premium Quality</h2>
+                            <p>All products are carefully selected for you</p>
+                            <a href="pages/products.html" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <p>Loading featured products...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ES6 Shop. All rights reserved. | Built with Vanilla JavaScript & ES6</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+</body>
+</html>

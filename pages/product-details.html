@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ES6 Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1> ES6 Shop</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+                <li id="authLink"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="product-details-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> / <a href="products.html">Products</a> / <span id="productName">Product</span>
+        </div>
+
+        <div class="product-details-container" id="productDetailsContainer">
+            <p class="loading">Loading product details...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ES6 Shop. All rights reserved. | Built with Vanilla JavaScript & ES6</p>
+    </footer>
+
+    <script type="module" src="../js/product-details.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+</body>
+</html>
